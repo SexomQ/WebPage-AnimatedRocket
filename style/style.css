@@ -1,0 +1,459 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+	scroll-behavior: smooth
+}
+body {
+	background-color: black;
+}
+.container{
+	max-width: 1170px;
+	padding: 0 15px 0 15px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+.navbar {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;  
+}
+.navbar .navbar__items {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.navbar__logo .logo {
+	font-size: 32px;
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	transition: background-color .3s linear, color 0.3s linear;
+}
+.logo:hover {
+	background-color: white;
+	color: black;
+}
+.nav-item {
+	font-size: 22px;
+	text-decoration: none;
+	color: white;
+	padding: 15px;
+	transition: background-color .3s linear, color 0.3s linear;
+}
+.nav-item:hover {
+	background-color: white;
+	color: black;
+}
+
+
+
+
+.rocketAnimation {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-color: #000;
+	overflow: hidden;
+}
+.rocket {
+	position: absolute;
+	top: 48%;
+	left: 200px;
+	z-index: 15;
+	transform: translateY(-50%);
+	animation: rocket 3s infinite ease;
+}
+.rocket img {
+	height: 330px;
+	width: auto;
+}
+@keyframes rocket {
+	0% {top: 48%;}
+	50% {top: 44%;}
+	100% {top: 48%;}
+}
+.fire {
+	position: absolute;
+	top: 50%;
+	left: 330px;
+	z-index: 14;
+	border-radius: 50%;
+}
+.fire__red {
+	width: 70px;
+	height: 70px;
+	background-color: #f51d1d;
+	animation: red .6s infinite ease-in;
+}
+@keyframes red {
+	0% {top: 50%; width: 70px; height: 70px; left: 330px;}
+	35% {top: 55%; width: 70px; height: 70px; left: 330px;}
+	100% {top: 80%; width: 0px; height: 0px; left: 365px;}
+}
+.fire__orange {
+	width: 70px;
+	height: 70px;
+	background-color: #ff6600;
+	animation: orange .6s .2s infinite ease-in;
+}
+@keyframes orange {
+	0% {top: 50%; width: 70px; height: 70px; left: 330px;}
+	35% {top: 55%; width: 70px; height: 70px; left: 330px;}
+	100% {top: 80%; width: 0px; height: 0px; left: 365px;}
+}
+.fire__yellow {
+	width: 70px;
+	height: 70px;
+	background-color: #ffb300;
+	animation: yellow .6s .4s infinite ease-in;
+}
+@keyframes yellow {
+	0% {top: 50%; width: 70px; height: 70px; left: 330px;}
+	35% {top: 55%; width: 70px; height: 70px; left: 330px;}
+	100% {top: 80%; width: 0px; height: 0px; left: 365px;}
+}
+.star {
+	border-radius: 50%;
+	position: absolute;
+	top: -10%;
+	z-index: 1;
+	background-color: white;
+	box-shadow: 0 0 15px white;
+}
+.star__big, .star__big-1, .star__big-2, .star__big-3 {
+	width: 20px;
+	height: 20px;
+}
+.star__big {
+	left: 15%;
+	animation: big 3s infinite linear;
+} 
+@keyframes big {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__big-1 {
+	left: 30%;
+	animation: big1 3s 2s infinite linear;
+}
+@keyframes big1 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__big-2 {
+	left: 60%;
+	animation: big2 3s 1s infinite linear;
+} 
+@keyframes big2 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__big-3 {
+	left: 90%;
+	animation: big3 3s .5s infinite linear;
+}
+@keyframes big3 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__medium, .star__medium-1, .star__medium-2, .star__medium-3 {
+	width: 15px;
+	height: 15px;
+}
+.star__medium {
+	left: 10%;
+	animation: medium 6s 1s infinite linear;
+} 
+@keyframes medium {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__medium-1 {
+	left: 26%;
+	animation: medium1 6s 2s infinite linear;
+}
+@keyframes medium1 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__medium-2 {
+	left: 49%;
+	animation: medium2 6s infinite linear;
+}
+@keyframes medium2 {
+	from {top: -10%;}
+	to {top: 100%}
+} 
+.star__medium-3 {
+	left: 88%;
+	animation: medium3 6s .5s infinite linear;
+}
+@keyframes medium3 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__small, .star__small-1, .star__small-2, .star__small-3 {
+	width: 10px;
+	height: 10px;
+}
+.star__small {
+	left: 95%;
+	animation: small 12s 8s infinite linear;
+} 
+@keyframes small {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__small-1 {
+	left: 77%;
+	animation: small1 12s 5s infinite linear;
+}
+@keyframes small1 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__small-2 {
+	left: 52%;
+	animation: small2 12s infinite linear;
+} 
+@keyframes small2 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+.star__small-3 {
+	left: 30%;
+	animation: small 12s 3s infinite linear;
+}
+@keyframes small3 {
+	from {top: -10%;}
+	to {top: 100%}
+}
+
+
+
+.preview {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	text-align: right;
+	z-index: 14;
+}
+.preview .container {
+	width: 100%;
+}
+.preview__items {
+	margin: auto 0;
+	display: flex;
+	flex-direction: column;
+}
+.preview__text {
+	font-size: 35px;
+	padding-bottom: 50px;
+}
+.preview__text span {
+	color: #ffb300;
+	font-size: 40px;
+}
+.preview__buttons {
+}
+.preview__button {
+	font-size: 22px;
+	text-transform: uppercase;
+	padding: 15px;
+	min-width: 215px;
+	margin-left: 100px;
+	border: 1px white linear;
+	background-color: transparent;
+	cursor: pointer;
+}
+.preview__button:hover {
+	box-shadow: 0px 0px 8px white;
+}
+
+
+
+.orar {
+	padding-top: 100px;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.orar__title {
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding-bottom: 80px;
+}
+.swiper-container {
+    width:100%;
+    height: auto;
+}
+.swiper-wrapper {
+
+}
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+table {
+
+}
+th {
+	font-size: 25px;
+	padding-bottom: 15px;
+}
+td {
+	text-align: left;
+	font-size: 20px;
+	padding-right: 15px;
+}
+.swiper-button-prev, .swiper-button-next  {
+	color: black;
+}
+.earth {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	z-index: 0;
+	transform: translateX(-50%);
+}
+
+
+.footer {
+	position: absolute;
+	padding: 20px;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	z-index: 15;
+	width: 100%;
+	background-color: black;
+}
+
+
+/* CV */
+
+.back a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 15px;
+	margin: 0 -15px;
+}
+.back__arrow {
+	padding: 10px;
+	font-size: 35px;
+	font-weight: 900
+}
+
+.cv .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cv__title {
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 80px;
+}
+.cv img {
+	text-align: center;
+}
+/* gallery*/
+.gallery .container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.footer__cv {
+	position: static;
+}
